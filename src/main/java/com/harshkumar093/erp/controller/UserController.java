@@ -25,4 +25,9 @@ public class UserController {
         return userService.readAll();
     }
 
+    @DeleteMapping("{id}")
+    public Response<UserModel> deleteUser(@PathVariable long id){
+        return userService.delete(id);
+    }
+
 }
